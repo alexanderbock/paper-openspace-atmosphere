@@ -1,0 +1,1 @@
+@book{haberle_clancy_forget_smith_zurek_2017, place={Cambridge}, series={Cambridge Planetary Science}, title={The Atmosphere and Climate of Mars}, DOI={10.1017/9781139060172}, publisher={Cambridge University Press}, year={2017}, collection={Cambridge Planetary Science}}
