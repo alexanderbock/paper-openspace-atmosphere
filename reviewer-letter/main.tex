@@ -1,0 +1,200 @@
+\documentclass{article}
+ 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{tcolorbox}
+ 
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {white}
+}
+ 
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.8em}
+ 
+\date{}
+ 
+\usepackage{titlesec}
+ 
+ 
+%\let\oldref\ref
+%\renewcommand{\ref}[1]{{\color{blue}(\textbf{\oldref{#1}})}}
+\newcommand{\joncomment}[1]{\textbf{[JC~} \textcolor{red}{#1} \textbf{~]}}
+ 
+\begin{document}
+ 
+\title{Letter of Response for submission 1137:\\ Interactive Visualization of Atmospheric Effects for Celestial Bodies}
+\maketitle
+ 
+Dear Reviewers,
+ 
+\noindent We like to thank you for the many valuable comments we received on our submission.
+During the revision, we have addressed the issues that were brought up and revised the manuscript accordingly.
+Below is an account of the manuscript changes in response to the concerns expressed in the summary review. All references to sections and figures relate to the new layout of the revised submission. All changes in the text are displayed using a blue color font. The additional coloration will naturally be removed for the camera-ready version of the paper.
+ 
+%We hope that all your comments have been sufficiently addressed in this revised manuscript. \\\\
+ 
+Best regards, \\
+The Authors \\\\
+ 
+\newpage
+
+\vspace*{1cm}
+\begin{tcolorbox}
+The description of the rendering algorithm in Section 5.2 would benefit from pseudo-code.
+\end{tcolorbox}
+
+We added a pseudo-code representation of the rendering algorithm to section 5.2 and used it to  our new discussion about the performance implications of our algorithm.
+ 
+\vspace*{1cm}
+\begin{tcolorbox}
+Section 6 is unpleasant to read to many numeric parameters that are specified as part of the flow text.\\
+\\
+Parameters values in section 6 should be moved to a table.\\
+\\
+I think that a lot of space could be saved and clarity improved in Section 6 by putting all of the parameter settings into a table or set of tables, with some brief explanatory text.
+\end{tcolorbox}
+
+As suggested, we extracted the parameters used to generate the pictures into a new Table 1. Furthermore, we extended section 6 to discuss the results and comparisons with the ground-truth pictures.
+ 
+\vspace*{1cm}
+\begin{tcolorbox}
+Given the fact that interactive performance is one of the key features of the presented model, a more elaborate evaluation of performance would have been desirable.
+\end{tcolorbox}
+
+We rewrote large portions of section 6.4 (Performance and Memory Consumption). A new Table 2 is provided with more data about performance when multiple atmospheres are visible at the same time, as was brought up in the review. The table shows a linear correlation between the framerate and the number of simultaneous atmospheres.
+The supplementary material was updated to reflect these updates. A new plot of the rendering performance versus the number of simultaneously visible atmospheres and a new table with detailed data about our implementation's scalability was provided.
+Furthermore, we added a video to the supplemental material that shows the entire flight path used to generated the performance measurements reported in Figure 8.
+
+
+\vspace*{1cm}
+\begin{tcolorbox}
+Improve the discussion about the results.
+\end{tcolorbox}
+
+We extended section 6 to improve the discussion of the results. We revised the parameters used to generate Mars figures and updated one of the Double Henyey-Greenstein phase function values, obtaining better results. Also, use got the geolocation of Curiosity hover when sunset images were taken and reproduced the same location, and Curiosity's camera FOV to generate better the pictures in Figure 5. Figures 3 and 4 were also updated to reflect the same time/geolocation than the original ground-truth photographs.
+We discussed the differences in color and brightness between the ground-truth pictures and generated pictures in section 6.
+Finally, we provided a better explanation for the fitting results in section 6.3.
+
+\vspace*{1cm}
+\begin{tcolorbox}
+Equations 22 (now Equation 21) seem a bit odd to me, so should be checked. Behavior as theta approaches 0 is not what I would have expected, and also AM = 1/s. Is that right?
+\end{tcolorbox}
+
+We updated the presentation of equation 21 (old equation 22) to provide a better understanding. \autoref{fig:airmass-coeff} is a plot of Pickering's approximation for $0 < \theta < 90$ (angle measurements in degrees). When theta approaches 0, airmass approaches 1.
+
+\begin{figure}[htb]
+ \centering 
+ \fbox{\includegraphics[width=0.7\linewidth]{pics/pickering-Approximation.png}}
+ \caption{Pickering approximation of air mass coefficient.}
+ \label{fig:airmass-coeff}
+\end{figure}
+
+\vspace*{1cm}
+\begin{tcolorbox}
+In the Precomputations section 5.1. I think that the T table is a 2D texture indexed by height r, and cosine mu. Is that right? It is not exactly clear in the paper. Also, in this section you talk about the 4D table being ``manually interpolated'' from a 3D table. It is not entirely clear to me what you mean and what this interpolation process is? This needs a bit more detail.
+\end{tcolorbox}
+
+The reviewer is correct. We updated the text to reflect texture indexing better.
+We also updated the text to clarify that the ``manually interpolated'' process referees to a user coded generated interpolation and not OpenGL's default hyperbolic interpolation. 
+
+\vspace*{1cm}
+\begin{tcolorbox}
+I have provided many detailed edits in the annotated PDF that should be obtained from the primary reviewer.
+\end{tcolorbox}
+
+All provided detailed edits in the annotated PDF were corrected in the text and displayed in blue.  In particular, we extended the description of the algorithm's performance impacts in the manuscript and also added an additional video to the supplemental material that is shows the entire camera path used to generated the data presented in Figure 8.
+
+
+\vspace*{1cm}
+\begin{tcolorbox}
+Explain the overestimation of the luminance for higher angles tying it back to the comparison of photographs with renderings.\\
+\\
+There are comparisons of the simulated results with the real photos (e.g., Fig. 5). I think the simulated results are all brighter than the real photos. Please explain the reason for this.
+\end{tcolorbox}
+
+We updated section 6, in the paper, to reflect our discussions about the differences in brightness and color between the ground-truth photographs and the generated images.
+
+\vspace*{1cm}
+\begin{tcolorbox}
+The name of “Atmospheric Visualizer,” appearing in the caption for Fig. 1 is not reused in the main text.
+\end{tcolorbox}
+
+It has been fixed in the text.
+
+\vspace*{1cm}
+\begin{tcolorbox}
+Reference [62] has a wrong carriage control.
+\end{tcolorbox}
+
+We assume that the reviewer is referring to reference 67 instead of 62, as we could not find anything wrong with [62]. We fixed the wrong new line that was present.
+
+\vspace*{1cm}
+\begin{tcolorbox}
+The paper is 11 pages including a single page for the references. This is longer than the recommended paper length (9 pages + 2 pages for references). Section 3 can be shortened because the contents of this section can be described well in the previous papers. It would be sufficient to simply show the final equations together with explanations of the physical meanings of each term in the equation. Section 5 can also be shortened because the method is basically the same as the previous method.
+\end{tcolorbox}
+
+Unfortunately the reviewer was in error as the original text had the correct nine pages of text + two pages for references, totalling the allowed 11 pages.  We made sure that even after the revisions, we stick to this limitation without needing to remove equations that might otherwise reduce the legibility of the manuscript.
+
+\vspace*{1cm}
+\begin{tcolorbox}
+The proposed method renders the atmosphere taking into account different components, multiple scattering, Rayleigh scattering, molecule absorption, curved ray paths, etc.. I think it is useful to show how each of these components affects the appearance of the atmosphere.
+\end{tcolorbox}
+
+We described how most of the atmosphere's different components affect the visualizations' final appearance on Figures 1-6. Because the number of different atmospheric components (around 22 if we do not consider the wavelength-dependency of some of those) is high, it is impracticable to account for each one in the necessary detail.
+We selected the components more commonly used in the literature to show their effects in our model. 
+ 
+% \vspace*{1cm}
+% \begin{tcolorbox}
+% A striking case to demonstrate the system should be added.
+% \end{tcolorbox}
+ 
+% Rather than focusing on a specific application case, we wanted to describe the OpenSpace system and use specific figures to demonstrate important aspects of the system. To this end the manuscript contains figures from a number of previously unpublished works that represent use cases of OpenSpace. The following are new use cases as indicated in figures:
+%  \begin{itemize}
+%      \item Figure 1 (left: Apollo, right: Extragalactic datasets, such as the 2df, 6df, Sloan Digital Sky Survey)
+%     \item Figure 2 (NYC Gaia Sprint event)
+%     \item Figure 3 (Volumetric and fieldline rendering of coronal mass ejection)
+%     \item Figure 4 (New Horizons fly-by of Ultima Thule)
+%     \item Figure 10 (Apollo 17 Landing site visualization) To further describe applications, we restructured section 5 to emphasize the utilization of the software for various use cases for astrographics. This section also shows how the system addresses the varying use cases described in the section 1.1, and we have made this link more clear in the text.
+%  \end{itemize} 
+ 
+ 
+% \vspace*{1cm}
+%  \begin{tcolorbox}
+%  In the implementation details, design rationales and discussions are mixed and should be separated.
+%  \end{tcolorbox}
+% We have moved the design rationales, and discussions where appropriate, to the beginning of each subsection in section 4, to provide a clear design choice and motivation in close conjunction with corresponding implementation details
+ 
+% \vspace*{1cm}
+% \begin{tcolorbox}
+% A quantitative performance evaluation should be provided.
+% \end{tcolorbox}
+ 
+% We have added a section on performance (section 4.5). While specific performance depends on many factors such as screen size (we can render up to 8k resolution for planetariums), the assets used in the particular scene graph instance, the GPU used,   It should be noted that this is not an extensive evaluation and we provide framerates correlating to various figures. The overall goal, of course, is an interactive system as OpenSpace is a tool for interactive planetarium shows which requires interactivity, and mission planning use also requires interactivity.  We felt that providing frame rates for the chosen examples is sufficient to clearly demonstrate this interactivity.
+ 
+% \vspace*{1cm}
+% \begin{tcolorbox}
+%  Compare this approach with the outcome of the EU project CROSS DRIVE.
+% \end{tcolorbox}
+ 
+% We added CROSSDRIVE to the related work and discussed its relation to OpenSpace.  We could not run the CROSSDRIVE software for performance comparisons as that software is not available.
+ 
+\vspace*{1cm}
+\begin{tcolorbox}
+Minor spelling, grammar and reference errors should be fixed.
+\end{tcolorbox}
+We thank the reviewer for the comments regarding language and we addressed all of them.
+ 
+\vspace*{1cm}
+ 
+ 
+ 
+With best regards, \\
+  The authors
+
+\end{document}
