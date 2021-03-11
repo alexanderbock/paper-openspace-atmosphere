@@ -140,7 +140,7 @@
 \shortauthortitle{Costa \etal: Interactive Visualization of Atmospheric Effects for Celestial Bodies}
 
 \abstract{
-We present an atmospheric model tailored for the interactive visualization of planetary surfaces. As the exploration of the solar system is progressing with increasingly accurate missions and instruments, the faithful visualization of planetary environments is gaining increasing interest in space research, mission planning, and science communication and education. Atmospheric effects are crucial in data analysis and to provide contextual information for planetary data. Our model correctly accounts for the non-linear path of the light inside the atmosphere (in Earth's case), the light absorption effects by molecules and dust particles, such as the ozone layer and the Martian dust, and a wavelength-dependent phase function for Mie scattering. The mode focuses on interactivity, versatility, and customization, and a comprehensive set of interactive controls make it possible to adapt its appearance dynamically. We demonstrate our results using Earth and Mars as examples. \review{However, it can be readily adapted for the exploration of other atmospheres found on, for example, of exoplanets.} For Earth's atmosphere, we visually compare our results with pictures taken from the International Space Station and against the CIE clear sky model. The Martian atmosphere is reproduced based on available scientific data, feedback from domain experts, and is compared to images taken by the Curiosity rover. The work presented here has been implemented in the OpenSpace system, which enables interactive parameter setting and real-time feedback visualization targeting presentations in a wide range of environments, from immersive dome theaters to virtual reality headsets.
+We present an atmospheric model tailored for the interactive visualization of planetary surfaces. As the exploration of the solar system is progressing with increasingly accurate missions and instruments, the faithful visualization of planetary environments is gaining increasing interest in space research, mission planning, and science communication and education. Atmospheric effects are crucial in data analysis and to provide contextual information for planetary data. Our model correctly accounts for the non-linear path of the light inside the atmosphere (in Earth's case), the light absorption effects by molecules and dust particles, such as the ozone layer and the Martian dust, and a wavelength-dependent phase function for Mie scattering. The mode focuses on interactivity, versatility, and customization, and a comprehensive set of interactive controls make it possible to adapt its appearance dynamically. We demonstrate our results using Earth and Mars as examples. However, it can be readily adapted for the exploration of other atmospheres found on, for example, of exoplanets. For Earth's atmosphere, we visually compare our results with pictures taken from the International Space Station and against the CIE clear sky model. The Martian atmosphere is reproduced based on available scientific data, feedback from domain experts, and is compared to images taken by the Curiosity rover. The work presented here has been implemented in the OpenSpace system, which enables interactive parameter setting and real-time feedback visualization targeting presentations in a wide range of environments, from immersive dome theaters to virtual reality headsets.
 }
 
 %% Keywords that describe your work. Will show as 'Index Terms' in journal
@@ -162,7 +162,7 @@ We present an atmospheric model tailored for the interactive visualization of pl
 \teaser{
   \centering
   \includegraphics[width=\linewidth]{teaser.png}
-  \caption{Faithful representation of Earth's atmosphere with our \review{atmospheric model. The atmospheric composition can be changed to simulate exoplanetary atmospheres or, in this case, be based on measured data to represent atmospheres accurately. From left to right, comparing the bottom row with the top row, we can see Earth's atmosphere with 6x more dust particles, 20x higher polarizability, 0.5x higher air's refractive index for wavelengths of 680 nm, and 2x denser.}}
+  \caption{Faithful representation of Earth's atmosphere with our atmospheric model. The atmospheric composition can be changed to simulate exoplanetary atmospheres or, in this case, be based on measured data to represent atmospheres accurately. From left to right, comparing the bottom row with the top row, we can see Earth's atmosphere with 6x more dust particles, 20x higher polarizability, 0.5x higher air's refractive index for wavelengths of 680 nm, and 2x denser.}
 	\label{fig:teaser}
 }
 
@@ -200,7 +200,7 @@ We present an atmospheric model tailored for the interactive visualization of pl
 
 % NEW VERSION
 The fundamental role of visualization in the exploration of scientific data has over the years become indisputable, and documented successes of visualization as an enabling technology across many disciplines create a solid foundation for the research field. Interactive data visualization also serves an increasingly important role in science communication and general outreach to broad audiences~\cite{ynnerman:16:inside}. The use of exploratory visualization in public spaces such as museums and science centers is elaborated upon by Ynnerman~\etal ~\cite{ynnerman:exploranation}. Recently, advances in computer hardware, increased availability of data, and improvements in visualization methodology have changed the traditional approach to science communication based on explanatory visualization to include elements of interactive data exploration.
-The neologism ``Exploranation'' denotes this convergence of exploration and explanation~\cite{ynnerman:exploranation}. Additionally, the need for explanatory approaches in scientific data exploration and documentation is also increasing as interactive visualization is maturing in many application domains as part of the workflow. The software OpenSpace~\cite{OpenSpace:2020} for astrovisualization is positioned in the middle of this \review{ongoing} evolution of science communication. It can be used as an interactive science communication tool for live presentations in situations ranging from planetarium and dome theater shows to classroom teaching and individual exploration on personal computers. It is, however, also used as an exploration tool in space and astronomy research in conjunction with other analysis tools and indeed has shown to be powerful in team communication and collaboration. 
+The neologism ``Exploranation'' denotes this convergence of exploration and explanation~\cite{ynnerman:exploranation}. Additionally, the need for explanatory approaches in scientific data exploration and documentation is also increasing as interactive visualization is maturing in many application domains as part of the workflow. The software OpenSpace~\cite{OpenSpace:2020} for astrovisualization is positioned in the middle of this ongoing evolution of science communication. It can be used as an interactive science communication tool for live presentations in situations ranging from planetarium and dome theater shows to classroom teaching and individual exploration on personal computers. It is, however, also used as an exploration tool in space and astronomy research in conjunction with other analysis tools and indeed has shown to be powerful in team communication and collaboration. 
 
 An important aspect of visualization at this intersection of exploration and explanation is the need for accurate visual context. In traditional science communication, explanatory visualization context and use of realism in visual metaphors provide real-world context. It has been shown that for novice users and learners context and completeness significantly aids in the formulation of mental models~\cite{KOZMA2003205}. This need carries over to the use of interactive data exploration for broad audiences and calls for significant emphasis on context and realism. The notion of scientific exploration is based on data-driven approaches, while at the same time, contextual content that maintains realism must also be based on data visualization. Inevitably this means that there is a need for approaches to visual representations that are positioned at the intersection of realistic graphics and data visualization. In this paper we present such an approach and present how realistic looking atmospheres can provide context and support interactive exploration of data from space exploration missions and astronomical observations. As the developed model and visualization is data-driven and configurable, it itself is a tool for exploration of the parameter spaces involved in light transport in differing planetary atmospheres and an example of how the ``exploranation'' process works in both ways.  
 %
@@ -216,7 +216,7 @@ An important aspect of visualization at this intersection of exploration and exp
 To achieve this, we implemented a highly configurable parametric system inside OpenSpace~\cite{OpenSpace:2020}. The domain expert can interactively calibrate the physical parameters of the atmosphere based on sensed or computed atmospheric data and visualize the results in real-time from any angle and position. 
 %Any changes in the parameters trigger the GPU-based computation of the atmospheric model for a new visualization.
  
-Our paper has three main contributions. First, we propose a novel atmospheric model whose main goal is to support a unified parameterized model capable of rendering the atmospheres of different planets and exoplanets with high accuracy. Second, we give an efficient open-source implementation of our new model that is able to run at interactive rates on existing graphics hardware. Finally, we validate our model with real-world data (\review{when} available) from Earth's and Mars' atmospheres as well as real-world images from these planets. The validation is based on luminance results from Earth's atmosphere for different Sun's positions are plotted against the theoretical model provided by the International Commission on Illumination (CIE)~\cite{Darula:2002}. 
+Our paper has three main contributions. First, we propose a novel atmospheric model whose main goal is to support a unified parameterized model capable of rendering the atmospheres of different planets and exoplanets with high accuracy. Second, we give an efficient open-source implementation of our new model that is able to run at interactive rates on existing graphics hardware. Finally, we validate our model with real-world data (when available) from Earth's and Mars' atmospheres as well as real-world images from these planets. The validation is based on luminance results from Earth's atmosphere for different Sun's positions are plotted against the theoretical model provided by the International Commission on Illumination (CIE)~\cite{Darula:2002}. 
 %\anderscomment{I must say that the introduction is very convincing :-). It can even form the basis for a general paper arguing for more work on science communication in VIS}
 % => Moved to beginning of section 4
 %The main contributions of our new proposed atmospheric model include:
@@ -268,68 +268,68 @@ Our paper has three main contributions. First, we propose a novel atmospheric mo
 
 %% Single Scattering
 
-The faithful visualization of planetary atmospheres has been a long time focus of the scientific community. \review{The atmospheric effects can improve the understanding of the Earth's and other planetary systems and help to understand different techniques of realistic visualization, providing the appropriate context for them~\cite{vis17-bladin-globe-browsing}.} In this scenario, realistic atmospheric effects are the main aim for scientists working with real-time astronomic visualization and education aiding. 
+The faithful visualization of planetary atmospheres has been a long time focus of the scientific community. The atmospheric effects can improve the understanding of the Earth and other planetary systems and help to understand different techniques of realistic visualization, providing the appropriate context for them~\cite{vis17-bladin-globe-browsing}. In this scenario, realistic atmospheric effects are the main aim for scientists working with real-time astronomic visualization and education aiding. 
 %\anderscomment{Much of this has been said in the introduction. If we need to save space this intro paragraph can be shortened.}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Atmospheric Models and Rendering}
 
-\review{Modeling} realistic rendering of atmospheres is a vast field and can be classified by two orthogonal types: offline/real-time and single/multiple scattering.
+Modeling realistic rendering of atmospheres is a vast field and can be classified by two orthogonal types: offline/real-time and single/multiple scattering.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\subsubsection{Single Scattering} \label{sec:rel:singlescattering}
 
-\noindent \textbf{Offline Single Scattering} \quad Nishita~\etal~\cite{Nishita:1993} were one of the first to approach the problem of rendering realistic atmospheres. In their work, the path of a light ray through the atmosphere and its energy contribution is calculated by numerical integration on the CPU that \review{is} partially cached in lookup tables. Their model does not account for multiple scattering, prohibit height-dependent atmospheric density changes, and the atmosphere can only be rendered from the outside.
+\noindent \textbf{Offline Single Scattering} \quad Nishita~\etal~\cite{Nishita:1993} were one of the first to approach the problem of rendering realistic atmospheres. In their work, the path of a light ray through the atmosphere and its energy contribution is calculated by numerical integration on the CPU that is partially cached in lookup tables. Their model does not account for multiple scattering, prohibit height-dependent atmospheric density changes, and the atmosphere can only be rendered from the outside.
 
-The work of Riley~\etal~\cite{Riley:2004} proposes an analytical solution through the use of multiple scattering phase functions to model the angular dependency of the scattering events (Mie scattering effects are simulated by the use of specific phase functions for water vapor and dust). \review{In Riley's solution, only single scattering effects were considered for an observer inside the atmosphere (on the ground). Also, no transitions between the ground and space were considered.}
+The work of Riley~\etal~\cite{Riley:2004} proposes an analytical solution through the use of multiple scattering phase functions to model the angular dependency of the scattering events (Mie scattering effects are simulated by the use of specific phase functions for water vapor and dust). In Riley's solution, only single scattering effects were considered for an observer inside the atmosphere (on the ground). Also, no transitions between the ground and space were considered.
 
-\noindent \textbf{Real-Time Single Scattering} \quad Hoffman~\etal's~\cite{Hoffman:2002} work extends the solution by Nishita to provide interactive frame rates. They \review{considered} the Earth's atmosphere density constant and made strong approximations of the radiative transfer equation~\cite{Chandrasekhar:1960, Mishchenko:2002} (exchanging \review{integral} calculations by multiplication of factors).
+\noindent \textbf{Real-Time Single Scattering} \quad Hoffman~\etal's~\cite{Hoffman:2002} work extends the solution by Nishita to provide interactive frame rates. They considered the Earth's atmosphere density constant and made strong approximations of the radiative transfer equation~\cite{Chandrasekhar:1960, Mishchenko:2002} (exchanging integral calculations by multiplication of factors).
 
- \review{Based on the work of Nishita~\cite{Nishita:1993}~\etal, O'Neil~\cite{ONeil2004}} proposed an algorithm to generate a real-time approximation of the Earth's atmosphere. He used a 2D lookup table for storing the optical depth and a 3D lookup table to store a precomputed single scattering integral. \review{In O'Neil's next work~\cite{ONeil:2005}, he eliminated the lookup tables. He approximated the single scattering equations by evaluating the integrals using a low sampling approach in the shader, using the graphics hardware to interpolate the atmosphere's final colors value. This latter method obtained good results in real-time and was also capable of rendering the atmosphere from any viewpoint on the ground or in space.}
+ Based on the work of Nishita~\cite{Nishita:1993}~\etal, O'Neil~\cite{ONeil2004} proposed an algorithm to generate a real-time approximation of the Earth's atmosphere. He used a 2D lookup table for storing the optical depth and a 3D lookup table to store a precomputed single scattering integral. In O'Neil's next work~\cite{ONeil:2005}, he eliminated the lookup tables. He approximated the single scattering equations by evaluating the integrals using a low sampling approach in the shader, using the graphics hardware to interpolate the atmosphere's final colors value. This latter method obtained good results in real-time and was also capable of rendering the atmosphere from any viewpoint on the ground or in space.
 
-The model by Schafhitzel~\etal~\cite{Schafhitzel:2007} also uses a precomputation model of the single scattering integral\review{,} and stores it as a lookup table (as suggested by O'Neil), \review{thus} accessing it by a smaller number of parameters (the view and Sun zenith angle). The small number of parameters in the parametrization of the table (the angle between the sun position and the view direction is not available in their solution) \review{impede} the final model \review{from displaying} the Earth's shadow inside the atmosphere.
+The model by Schafhitzel~\etal~\cite{Schafhitzel:2007} also uses a precomputation model of the single scattering integral, and stores it as a lookup table (as suggested by O'Neil), thus accessing it by a smaller number of parameters (the view and Sun zenith angle). The small number of parameters in the parametrization of the table (the angle between the sun position and the view direction is not available in their solution) prevents the final model from displaying the Earth's shadow inside the atmosphere.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\subsubsection{Multiple Scattering} \label{sec:rel:multiplescattering}
 
 %In order to correctly reproduce colors in twilight, multiple scattering of the radiance of the light must be considered as the light traverses more atmosphere during the twilight.
 
-\review{To correctly reproduce colors in the twilight, multiple scattering of the light must be considered as the light traverses more atmosphere during the twilight.}
+To correctly reproduce colors in the twilight, multiple scattering of the light must be considered as the light traverses more atmosphere during the twilight.
 
-\noindent \textbf{Offline Multiple Scattering} \quad Following their previous work, Nishita~\cite{Nishita:1996} used volume radiosity methods that divide the sky \review{hemisphere} in cells to take multiple \review{light} scattering effects into account. This enables the generation of images for observers inside or outside the atmosphere, and produces visually suitable images but takes a long time to generate a static image as it consumes a large amount of computational resources and is thus not suitable for a real-time system.
+\noindent \textbf{Offline Multiple Scattering} \quad Following their previous work, Nishita~\cite{Nishita:1996} used volume radiosity methods that divide the sky hemisphere in cells to take multiple light scattering effects into account. This enables the generation of images for observers inside or outside the atmosphere, and produces visually suitable images but takes a long time to generate a static image as it consumes a large amount of computational resources and is thus not suitable for a real-time system.
 
-Applying a Monte-Carlo simulation technique on an analytical model, Preetham~\etal~\cite{Preetham:1999} presented a solution for the multiple scattering problem. Their model produces good images for an observer on the ground but is not capable of generating images for an observer outside the atmosphere. \review{Also, as Zotti~\etal pointed out in~\cite{Zotti:2007}, the model has some incorrect behavior producing negative intensities for some cases.}
+Applying a Monte-Carlo simulation technique on an analytical model, Preetham~\etal~\cite{Preetham:1999} presented a solution for the multiple scattering problem. Their model produces good images for an observer on the ground but is not capable of generating images for an observer outside the atmosphere. Also, as Zotti~\etal~pointed out in~\cite{Zotti:2007}, the model has some incorrect behavior producing negative intensities for some cases.
 
-Horsek~\cite{Hosek:2012}~\etal~proposed an analytical atmospheric model that improves Preetham's model~\cite{Preetham:1999}. \review{They improved the final analytical formula by adding more degrees of freedom for the fitting phase. They added new parameters to the model besides the turbidity (an indirect measure of the number of suspended particles in a medium) and executed all the calculations in a fully spectral model, enabling the model to handle different illumination spectrums.}
+Horsek~\cite{Hosek:2012}~\etal~proposed an analytical atmospheric model that improves Preetham's model~\cite{Preetham:1999}. They improved the final analytical formula by adding more degrees of freedom for the fitting phase. They added new parameters to the model besides the turbidity (an indirect measure of the number of suspended particles in a medium) and executed all the calculations in a fully spectral model, enabling the model to handle different illumination spectrums.
 %They improved the analytical formula by adding more degrees of freedom for the fitting phase, adding new parameters to the model besides the turbidity (an indirect measure of the number of suspended particles in a medium), and executing all the calculations in a fully spectral model, enabling the model to handle a different illumination spectrum. 
 
 %\noindent \textbf{Real-time Multiple Scattering} \quad Bruneton~\etal's~\cite{BrunetonNeyret:2008} atmospheric model and algorithm, which our work extends, improves the model of Schafhitzel~\etal~\cite{Schafhitzel:2007} by adding a 4\textsuperscript{th} parameter (the cosine of the angle between the Sun position and the view direction) for the lookup table and an incremental algorithm for precomputing the radiance contribution due to multiple scattering light effects. Because of the precomputation nature and the use of the lookup tables, Bruneton's model is capable of \review{running} in real-time and produces very good results. Still, the atmospheric model proposed doesn't account for molecular anisotropic, Mie scattering wavelength dependency, and the absorption of energy by molecules (\textit{e.g.} the oxygen and ozone molecules). 
 
-\noindent \textbf{Real-time Multiple Scattering} \quad \review{The atmospheric model of Bruneton~\etal's~\cite{BrunetonNeyret:2008}, which our work extends, improves the model of Schafhitzel~\etal~\cite{Schafhitzel:2007}~adding a 4\textsuperscript{th} parameter (the cosine of the angle between the Sun position and the view direction) for the lookup table and an incremental algorithm for precomputing the radiance contribution due to multiple scattering light effects. Because of the precomputation nature and the lookup tables, Bruneton's model is capable of running in real-time and produces very good results. The atmospheric model proposed does not account for molecular anisotropic, Mie scattering wavelength dependency, and the absorption of energy by molecules (\textit{e.g.}, the oxygen and ozone molecules)}.
+\noindent \textbf{Real-time Multiple Scattering} \quad The atmospheric model of Bruneton~\etal~\cite{BrunetonNeyret:2008}, which our work extends, improves the model of Schafhitzel~\etal~\cite{Schafhitzel:2007}~adding a 4\textsuperscript{th} parameter (the cosine of the angle between the Sun position and the view direction) for the lookup table and an incremental algorithm for precomputing the radiance contribution due to multiple scattering light effects. Because of the precomputation nature and the lookup tables, Bruneton's model is capable of running in real-time and produces very good results. The atmospheric model proposed does not account for molecular anisotropic, Mie scattering wavelength dependency, and the absorption of energy by molecules (\textit{e.g.}, the oxygen and ozone molecules).
 
 
 %In a model very similar to Bruneton's model, Elek~\etal~\cite{Elek:2009} presented a real-time algorithm for the rendering of planetary atmospheres. Their model is capable of \review{simulating} multiple scattering light effects and also uses an incremental algorithm for the precomputation of the final radiance value. Different from Bruneton, their calculations do not take the angle between the Sun and the view direction into account, so they cannot reproduce the Earth's shadow inside the atmosphere.
 
-\review{In a similar model to Bruneton's model, Elek~\etal~\cite{Elek:2009} presented a real-time algorithm for the rendering of planetary atmospheres. Their model can simulate multiple scattering light effects and also uses an incremental algorithm for the precomputation of the final radiance value. Unlike Bruneton, their calculations do not take the angle between the Sun and the view direction into account, so they cannot reproduce the Earth's shadow inside the atmosphere.}
+In a similar model to Bruneton's model, Elek~\etal~\cite{Elek:2009} presented a real-time algorithm for the rendering of planetary atmospheres. Their model can simulate multiple scattering light effects and also uses an incremental algorithm for the precomputation of the final radiance value. Unlike Bruneton, their calculations do not take the angle between the Sun and the view direction into account, so they cannot reproduce the Earth's shadow inside the atmosphere.
 
-Extending their previous work, Elek~\etal~\cite{Elek:2010} included the effect of scattering in water, through the use of a different attenuation coefficient, and variable atmospheric density, rewriting the Rayleigh and Mie scattering coefficients as functions of the molecular number density, utilizing fully spectral data. \review{Similar to Bruneton and Neyret~\cite{BrunetonNeyret:2008}, Elek~\etal~do not consider Mie wavelength dependency or absorption of radiant energy.}
+Extending their previous work, Elek~\etal~\cite{Elek:2010} included the effect of scattering in water, through the use of a different attenuation coefficient, and variable atmospheric density, rewriting the Rayleigh and Mie scattering coefficients as functions of the molecular number density, utilizing fully spectral data. Similar to Bruneton and Neyret~\cite{BrunetonNeyret:2008}, Elek~\etal~do not consider Mie wavelength dependency or absorption of radiant energy.
 
 %As with the work in~\cite{BrunetonNeyret:2008}, no Mie wavelength dependency or absorption of radiant energy is considered.
 
-\review{The simulation of a correct physically-based atmospheric model is a complex task, as many physical effects \review{impact} each photon passing through the participating media. \review{ The formulation of} an entirely accurate real-time model for realistic rendering of atmospheres is infeasible. However, our goal is to focus on the primary process needed to visualize the planetary atmospheres with interactive controls correctly.}
+The simulation of a correct physically-based atmospheric model is a complex task, as many physical effects impact each photon passing through the participating media. The formulation of an entirely accurate real-time model for realistic rendering of atmospheres is infeasible. However, our goal is to focus on the primary process needed to visualize the planetary atmospheres with interactive controls correctly.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Visualization of Atmospheric Models}
-The visualization of atmospheric models can be grouped into two categories that each \review{has its} own distinct requirements.
+The visualization of atmospheric models can be grouped into two categories that each has its own distinct requirements.
 
-\review{The first category concerns the visualization of observed, measured, and simulated data interacting with an atmospheric model. For instance, weather visualization and prediction consist} of some of the most well-known systems and toolkits: Vis5D, VisAD, D3D, NASA's Atmosphere, the Globe program, and NOAA's Weather and Climate Toolkit~\cite{NOAAWeatherClimate}. \review{Because these systems are aimed at the visualization of layered and volumetric data, they often lack important visual information that is crucial when visually analyzing atmospheres such as: Rayleigh and Mie scattering effects, aerial perspective, and others which help the consumer of the visualization with its context.}
+The first category concerns the visualization of observed, measured, and simulated data interacting with an atmospheric model. For instance, weather visualization and prediction consist of some of the most well-known systems and toolkits: Vis5D, VisAD, D3D, NASA's Atmosphere, the Globe program, and NOAA's Weather and Climate Toolkit~\cite{NOAAWeatherClimate}. Because these systems are aimed at the visualization of layered and volumetric data, they often lack important visual information that is crucial when visually analyzing atmospheres such as: Rayleigh and Mie scattering effects, aerial perspective, and others which help the consumer of the visualization with its context.
 %Because these systems are aimed at the visualization of layered and volumetric data, \review{they often lack} important visual information that is crucial when visually analyzing atmospheres, as Rayleigh and Mie scattering effects, aerial perspective, and others which help the consumer of the visualization with its context.
 
 %In the second category, there are several software packages used for the visualization of astronomical/astrophysical data and topological information.
-\review{The software packages used for the visualization of astronomical/astrophysical data and topological information are in the second category.} Among them, capable of \review{displaying} planetary surfaces and atmospheres are Uniview~\cite{klashed10uniview}, Digistar from Evans and Sutherland, Celestia, Stellarium, Gaia Sky~\cite{GaiaSky2018}, and Space Engine. These systems have different capabilities when displaying atmospheric \review{effects. However,} they lack advanced parameter control and higher-order effects such as multiple scattering, or the description of the atmospheric model in use is not available. The same category also includes the Google Maps/Earth systems~\cite{GoogleEarth:2017}\review{, which are capable of rendering the atmospheres of Earth, Mars, and Venus in real-time, but lack controls} for the user or any indication of the atmospheric model used to produce the results. \review{Among 3D natural scene simulators}, Proland is a real-time system capable of rendering Earth's atmosphere using the atmospheric model and rendering algorithm created by Bruneton~\etal~\cite{BrunetonNeyret:2008}.
+The software packages used for the visualization of astronomical/astrophysical data and topological information are in the second category. Among them, capable of displaying planetary surfaces and atmospheres are Uniview~\cite{klashed10uniview}, Digistar from Evans and Sutherland, Celestia, Stellarium, Gaia Sky~\cite{GaiaSky2018}, and Space Engine. These systems have different capabilities when displaying atmospheric effects. However, they lack advanced parameter control and higher-order effects such as multiple scattering, or the description of the atmospheric model in use is not available. The same category also includes the Google Maps/Earth systems~\cite{GoogleEarth:2017}, which are capable of rendering the atmospheres of Earth, Mars, and Venus in real-time, but lack controls for the user or any indication of the atmospheric model used to produce the results. Among 3D natural scene simulators, Proland is a real-time system capable of rendering Earth's atmosphere using the atmospheric model and rendering algorithm created by Bruneton~\etal~\cite{BrunetonNeyret:2008}.
 
 %The third category 
 
@@ -344,9 +344,9 @@ The visualization of atmospheric models can be grouped into two categories that 
 \section{Background}\label{sec:background}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This section explains the \review{fundamental} concepts of radiative transfer physics and \review{their applications in atmospheric} physics rendering.
+This section explains the fundamental concepts of radiative transfer physics and their applications in atmospheric physics rendering.
 
-The light interactions inside a medium can be described by two distinct approaches: phenomenological~\cite{Chandrasekhar:1960, Preisendorfer:1965} and microphysical~\cite{Mishchenko:article:2006}. In the following description, we use the former approach. When the radiant energy (photons in a light ray of wavelength $\lambda$) travels through a medium, it can be absorbed, scattered, or emitted. The energy is extinct (absorbed + scattered) when photons hit a molecule or particle\review{,} or when part of the initial energy is absorbed. The fraction of absorbed energy is represented by the absorption coefficient $\beta^{abs}(\lambda)$, and described in differential form as the rate \review{of} change of energy (the radiance: the radiant flux per unit solid angle per unit projected area) per unit of length in the direction of solid angle $\vec{\omega}$ (traveling direction) at a point $\vec{x}$. The fraction of energy scattered in different directions other than $\vec{\omega}$ (also known as \textit{out-scattered} radiant energy) is described by the scattering coefficient $\beta^{scat}(\lambda)$ and, \review{similarly} to the absorption, can be formulated in differential form too:
+The light interactions inside a medium can be described by two distinct approaches: phenomenological~\cite{Chandrasekhar:1960, Preisendorfer:1965} and microphysical~\cite{Mishchenko:article:2006}. In the following description, we use the former approach. When the radiant energy (photons in a light ray of wavelength $\lambda$) travels through a medium, it can be absorbed, scattered, or emitted. The energy is extinct (absorbed + scattered) when photons hit a molecule or particle, or when part of the initial energy is absorbed. The fraction of absorbed energy is represented by the absorption coefficient $\beta^{abs}(\lambda)$, and described in differential form as the rate of change of energy (the radiance: the radiant flux per unit solid angle per unit projected area) per unit of length in the direction of solid angle $\vec{\omega}$ (traveling direction) at a point $\vec{x}$. The fraction of energy scattered in different directions other than $\vec{\omega}$ (also known as \textit{out-scattered} radiant energy) is described by the scattering coefficient $\beta^{scat}(\lambda)$ and, similarly to the absorption, can be formulated in differential form too:
 
 \vspace*{-1.5mm}
 \begin{equation}\label{eq:extinction}
@@ -387,7 +387,7 @@ This work does not consider media capable of emitting radiant energy, so $W_{e}(
 }
 \vspace*{-2.5mm}
 
-\review{The \textit{transmittance} $T(\vec{x}, \vec{x_0})$} is the result of solving the differential equation~\ref{eq:extinction} and is given by:
+The \textit{transmittance} $T(\vec{x}, \vec{x_0})$ is the result of solving the differential equation~\ref{eq:extinction} and is given by:
 
 \vspace*{-2.5mm}
 \begin{equation}\label{eq:transmittance}
@@ -396,7 +396,7 @@ T(\vec{x}, \vec{x_0}) = exp\Bigg(-\underbrace{\int_{\vec{x}}^{\vec{x_0}}{\beta^{
 \end{equation} 
 \vspace*{-1.5mm}
 
-Finally, \review{it should be noted that} the radiant energy lost by the out-scattering effect is not converted to other energy forms; this radiant energy travels further through the \review{atmospheric} medium and may be scattered into another beam of light. This way, the out-scattering light is accounted for by the extinction process and the in-scattering light.
+Finally, it should be noted that the radiant energy lost by the out-scattering effect is not converted to other energy forms; this radiant energy travels further through the atmospheric medium and may be scattered into another beam of light. This way, the out-scattering light is accounted for by the extinction process and the in-scattering light.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -417,7 +417,7 @@ In the case of planetary atmospheres as the medium of interaction with the light
 R(\vec{x}, \vec{\omega}, \lambda) = T(\vec{x}, \vec{x_0}) \int_{2\pi}{ f(\vec{x}, \vec{\omega}', \vec{\omega})(\vec{n}(\vec{x_0}) \bullet  \vec{\omega}') L(\vec{x},\vec{\omega}', \lambda)d\vec{\omega}'}
 \end{equation}
 
-Small particles (molecules and atoms) and large particles (radius between $10\,\text{nm}$ and $50\,\mu \text{m}$~\cite{Thomas:2017}) are the primary sources of atmospheric absorption and scattering (we don't consider inelastic scattering (Raman scattering) in this work, \textit{i.e.}, scattered photons have the same frequency and wavelength as the incident photons). The particles' absorption and scattering coefficients in an atmosphere are described by the Rayleigh and Mie scattering theories. Rayleigh scattering~\cite{Rayleigh:1871} $\beta_R^{scat}(\lambda)$ and $P_R(\vec{x}, \vec{\omega}', \vec{\omega})$, describes the scattering of radiant energy by molecules \review{whose} radius $r$ is very small ($x \ll 1$, $\ x=(2\pi r)/\lambda$) compared to the wavelength $\lambda$ of the incident light. Mie's theory describes the scattering ($\beta_M^{scat}(\lambda)$ and $P_M(\vec{x}, \vec{\omega}', \vec{\omega})$) and absorption $\beta_M^{abs}(\lambda)$ of radiant energy by large particles~\cite{Hulst:1981, Mishchenko:2006} (the term large is related to the size of the particle radius to the wavelength of the incident light on the particle). Mie's theory is more general than Rayleigh's theory and explains the interactions between radiant energy and particles through the perspective of Maxwell's equations~\cite{Mishchenko:2002}. Combining this information yields the extended volume rendering equation for the light interacting with the atmospheric %medium of a planet (see \autoref{fig:atm-model}):
+Small particles (molecules and atoms) and large particles (radius between $10\,\text{nm}$ and $50\,\mu \text{m}$~\cite{Thomas:2017}) are the primary sources of atmospheric absorption and scattering (we don't consider inelastic scattering (Raman scattering) in this work, \textit{i.e.}, scattered photons have the same frequency and wavelength as the incident photons). The particles' absorption and scattering coefficients in an atmosphere are described by the Rayleigh and Mie scattering theories. Rayleigh scattering~\cite{Rayleigh:1871} $\beta_R^{scat}(\lambda)$ and $P_R(\vec{x}, \vec{\omega}', \vec{\omega})$, describes the scattering of radiant energy by molecules whose radius $r$ is very small ($x \ll 1$, $\ x=(2\pi r)/\lambda$) compared to the wavelength $\lambda$ of the incident light. Mie's theory describes the scattering ($\beta_M^{scat}(\lambda)$ and $P_M(\vec{x}, \vec{\omega}', \vec{\omega})$) and absorption $\beta_M^{abs}(\lambda)$ of radiant energy by large particles~\cite{Hulst:1981, Mishchenko:2006} (the term large is related to the size of the particle radius to the wavelength of the incident light on the particle). Mie's theory is more general than Rayleigh's theory and explains the interactions between radiant energy and particles through the perspective of Maxwell's equations~\cite{Mishchenko:2002}. Combining this information yields the extended volume rendering equation for the light interacting with the atmospheric %medium of a planet (see \autoref{fig:atm-model}):
 medium of a planet: 
 
 \vspace*{-5mm}
@@ -455,7 +455,7 @@ In the following sections, we describe the atmospheric model we derived and impl
 
 An atmospheric model can be described in two parts: the way the radiant energy is scattered and the way it is absorbed inside the atmosphere.
 
-In our model for realistic visualization of atmospheres, we take a starting point in the previous works in the literature and extend it to account for the absorption of energy by different molecules, describing how the molecules of ozone and oxygen \review{absorb} radiant energy in Earth's atmosphere. \review{We then} propose a general method for the absorption of radiant energy by molecules based on results from Maxwell's equation and the adoption of complex \review{indices} of refraction~\cite{Bohren:1983}. The resulting parameterized atmospheric model \review{includes}: 
+In our model for realistic visualization of atmospheres, we take a starting point in the previous works in the literature and extend it to account for the absorption of energy by different molecules, describing how the molecules of ozone and oxygen absorb radiant energy in Earth's atmosphere. We then propose a general method for the absorption of radiant energy by molecules based on results from Maxwell's equation and the adoption of complex indices of refraction~\cite{Bohren:1983}. In the case of large particles, we propose using the anomalous diffraction approximation for absorbing spheres offered by van~de~Hust~\cite{Hulst:1981} to model the extinction of radiant energy. The resulting parameterized atmospheric model includes: 
 %\anderscomment{This paragraph should be rewritten to connect more to section 3 rather than being a standalone introduction to the model.}
 %The \CS{change "main" to "specific"?} main contributions of our new proposed atmospheric model include:
 \vspace{-1mm}
@@ -465,31 +465,31 @@ In our model for realistic visualization of atmospheres, we take a starting poin
 	\item general treatment of the light absorption by molecules and particles,
 	\vspace{-2.5mm}	\item the correct transmittance computation for the curved path lengths of light rays inside the atmosphere (in Earth's case),
 	%\vspace{-2.5mm}	\item account for the contributions of polarizability anisotropy to Rayleigh scattering theory\cite{Rayleigh:1871} and a better approximation for Rayleigh's phase function for Earth's molecular scattering,
-	\vspace{-2.5mm}	\item \review{a better approximation for Rayleigh's phase function for Earth's molecular scattering and accounting for the contributions of polarizability anisotropy~\cite{Rayleigh:1871},}
+	\vspace{-2.5mm}	\item a better approximation for Rayleigh's phase function for Earth's molecular scattering and accounting for the contributions of polarizability anisotropy~\cite{Rayleigh:1871},
 	\vspace{-2.5mm}	\item effective use of the Mie scattering\cite{Mishchenko:2006}  dependency of the light's wavelength to take into account the energy absorption/scattering in heavily dusty atmospheres,
 	%\vspace{-2.5mm}	\item Mie phase function with incident light wavelength dependency and
 	%\review{forward} and backward scattering contributions control,
-	\vspace{-2.5mm}	\item \review{the use of a wavelength-dependent Mie phase function with  
-    forward and backward scattering contributions control,}
+	\vspace{-2.5mm}	\item the use of a wavelength-dependent Mie phase function with  
+    forward and backward scattering contributions control,
 	\vspace{-2.5mm}	\item use of different particle concentrations (hydrostatic equilibrium or user-defined).
 	\vspace{-1mm}
 \end{itemize}
 
-We modeled the scattering and absorption of radiant energy for large particles ($10\text{nm} < r < 50\mu \text{m}$) using an extended Double Henyey-Greenstein three-parameter phase function~\cite{Kattawar:1975} to account for wavelength dependency, and a scattering coefficient dependent of the inverse \review{square} of the wavelength of the incident light~\cite{Hulst:1981}.
+We modeled the scattering and absorption of radiant energy for large particles ($10\text{nm} < r < 50\mu \text{m}$) using an extended Double Henyey-Greenstein three-parameter phase function~\cite{Kattawar:1975} to account for wavelength dependency, and a scattering coefficient dependent of the inverse square of the wavelength of the incident light~\cite{Hulst:1981}.
 
-For Earth, we use the air mass coefficient and the distance between the ground and the top of the atmosphere to calculate the \review{approximate} length traveled by a light ray inside the atmosphere~\cite{Pickering:2002}.
+For Earth, we use the air mass coefficient and the distance between the ground and the top of the atmosphere to calculate the approximate length traveled by a light ray inside the atmosphere~\cite{Pickering:2002}.
 
-In our work, we generate only clear sky images but it is possible~\cite{Schneider:2015} to account for other weather variations \review{by} adding clouds using height and type information (the clouds in our generated images are textures with no optical properties), and considering their light interaction in the atmospheric model. Other weather variations can be obtained considering \review{the contributions of different aerosols} throughout the atmospheric model. 
+In our work, we generate only clear sky images but it is possible~\cite{Schneider:2015} to account for other weather variations by adding clouds using height and type information (the clouds in our generated images are textures with no optical properties), and considering their light interaction in the atmospheric model. Other weather variations can be obtained considering the contributions of different aerosols throughout the atmospheric model. 
 To simplify the proposed model and yield real-time frame rates, the diffuse radiation field contribution from the ocean is not considered.
 
-The following sections describe these features in detail, and how to put them together to \review{yield} our proposed atmospheric model.  
+The following sections describe these features in detail, and how to put them together to yield our proposed atmospheric model.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Scattering by Molecules and Atoms}
 
-As discussed in \autoref{sec:atmPhysics}, the loss of radiant energy is described as a combination of the absorption and out-scattering effects inside the atmosphere. It is well known that different particles have different scattering and absorption properties for the different parts of the light spectrum~\cite{Chandrasekhar:1960, Hulst:1981, Bohren:1983, Thomas:2017, Keller:2013}. In this work, we are only concerned with the scattering and absorption properties of particles in \review{a} specific interval of the visible spectrum of the light spectrum, \textit{i.e.}, light with a wavelength in the interval $440\text{nm}-680\text{nm}$. Although full spectral atmospheric model rendering is possible, we restrict our computations to the light interval above, to be able to use (and validate our model with) the different tabulated data available.\\
+As discussed in \autoref{sec:atmPhysics}, the loss of radiant energy is described as a combination of the absorption and out-scattering effects inside the atmosphere. It is well known that different particles have different scattering and absorption properties for the different parts of the light spectrum~\cite{Chandrasekhar:1960, Hulst:1981, Bohren:1983, Thomas:2017, Keller:2013}. In this work, we are only concerned with the scattering and absorption properties of particles in a specific interval of the visible spectrum of the light spectrum, \textit{i.e.}, light with a wavelength in the interval $440\text{nm}-680\text{nm}$. Although full spectral atmospheric model rendering is possible, we restrict our computations to the light interval above, to be able to use (and validate our model with) the different tabulated data available.\\
 
-\noindent \textbf{Rayleigh-Cabannes Scattering} \quad The \textit{Rayleigh scattering phase function}, $P_R(\theta)$, given by \autoref{eq:phase-ray}, represents a good approximation \review{to} the angular distribution of the scattered light~\cite{Thomas:2017} by small particles ($\text{radius}_{\text{particle}} \ll \lambda_{\text{incident light}}$) inside the atmosphere:
+\noindent \textbf{Rayleigh-Cabannes Scattering} \quad The \textit{Rayleigh scattering phase function}, $P_R(\theta)$, given by \autoref{eq:phase-ray}, represents a good approximation to the angular distribution of the scattered light~\cite{Thomas:2017} by small particles ($\text{radius}_{\text{particle}} \ll \lambda_{\text{incident light}}$) inside the atmosphere:
 
 \vspace*{-2mm}
 \begin{equation} \label{eq:phase-ray}
@@ -509,7 +509,7 @@ P_R(\theta) = 0.7629(1 + 0.932\cdot cos^2\theta) \cdot\frac{1}{4\pi}
 \end{equation}
 \vspace*{-2mm}
 
-\review{Together with the Rayleigh scattering coefficient $\beta_R^{scat}(\lambda) = \beta_R^{scat}(0, \lambda)$ in \autoref{eq:rayleigh-coeff}, we can effectively describe the Rayleigh scattering process:}
+Together with the Rayleigh scattering coefficient $\beta_R^{scat}(\lambda) = \beta_R^{scat}(0, \lambda)$ in \autoref{eq:rayleigh-coeff}, we can effectively describe the Rayleigh scattering process:
 
 \vspace*{-4mm}
 {
@@ -520,19 +520,16 @@ P_R(\theta) = 0.7629(1 + 0.932\cdot cos^2\theta) \cdot\frac{1}{4\pi}
 }
 \vspace*{-4mm}
 
-\review{
 %Where $\lambda$ is the wavelength of the incident light, $n(\lambda)$ the refractive index of the medium, $N$ is the molecular density at sea level, $H_R$ is the thickness of the atmosphere if its density were uniform (also known as the scale height), and $h$ is the atmospheric height relative to the surface.
 
 In \autoref{eq:rayleigh-coeff}, $\lambda$, $n(\lambda)$, and $N$ are the wavelength of the incident light, the medium's refractive index, and the molecular density at sea level, respectively. Further, in \autoref{eq:rayleigh-coeff}, the exponential term describes the atmospheric density variation with height and is formally known as \emph{hydrostatic concentration function}. The scale height $H_R$ is the atmosphere's thickness if its density were uniform and $h$ is 
 the atmospheric height relative to the surface.
-}
 
-\review{
-For maximum parametrization, the molecular density and scale height can be input as functions of the mean molecular mass $M$, and the mean mass density $\rho$, of the atmosphere's gases. Thus, $H = RT/Mg$ and $N = (N_A\cdot \rho_{m})/M$ ($T$ is the temperature, and $R$, $N_A$, and $g$ are ideal gas constant, Avogadro's number, and the acceleration due to gravity on the planet's surface).} This highly parameterized way to describe the atmospheric model gives \review{the user} better control over the final results.
+For maximum parametrization, the molecular density and scale height can be input as functions of the mean molecular mass $M$, and the mean mass density $\rho$, of the atmosphere's gases. Thus, $H = RT/Mg$ and $N = (N_A\cdot \rho_{m})/M$ ($T$ is the temperature, and $R$, $N_A$, and $g$ are ideal gas constant, Avogadro's number, and the acceleration due to gravity on the planet's surface). This highly parameterized way to describe the atmospheric model gives the user better control over the final results.
 
 %For maximum parametrization, the molecular density and scale height can be \review{input} as functions of the mean molecular mass \review{$M$,} and the mean mass density $\rho_m$, respectively, of the gases in the atmosphere, \textit{i.e.}, $H = RT/Mg$ and $N = (N_A\cdot \rho_{m})/M$, where $T$ is the temperature, and  $R$, $N_A$, and $g$ are ideal gas constant (for the current planet), Avogadro's number, and the acceleration due to gravity on the planet's surface. This highly parameterized way to describe the atmospheric model gives \review{the user} better control over the final results.
 
-\review{Because we considered the existence of anisotropic molecules in the atmosphere, we applied the correction given by the function $f(\delta)$~\cite{Liou:2002} in \autoref{eq:rayleigh-coeff}}. The depolarization factor $\delta$ is slightly wavelength-dependent and varies for different molecules. In this work we consider it constant in the atmosphere.
+Because we considered the existence of anisotropic molecules in the atmosphere, we applied the correction given by the function $f(\delta)$~\cite{Liou:2002} in \autoref{eq:rayleigh-coeff}. The depolarization factor $\delta$ is slightly wavelength-dependent and varies for different molecules. In this work we consider it constant in the atmosphere.
 Note that the Rayleigh phase function is dependent on the wavelength $1/\lambda^4$, \textit{i.e.}, shorter wavelengths are scattered more than long wavelengths. This is the effect responsible for the bluish color of the sky in the daytime.
 
 Our implementation of the molecular scattering gives the user the option to provide all variables needed to evaluate \autoref{eq:rayleigh-coeff} in real-time or, supply the value of the fractional part in the equation for the desired wavelengths (easily found in tabulated values in the literature~\cite{Penndorf:1957}) and only calculate the particle concentration (the exponential part in \autoref{eq:rayleigh-coeff}) for the height within the atmosphere.\\
@@ -568,7 +565,7 @@ In the next section, we present two different ways to account for molecule energ
   \centering
   \fbox{\includegraphics[width=0.99\linewidth]{Ozone-comp}}
   \vspace*{-5mm}
-  \caption{Light absorbing molecules influence the atmosphere's visual character. \review{Our method enables the rendering of atmospheres with (left picture) or without (right picture) oxygen and ozone molecules. The ozone presence is reflected as a deeper bluish color seen above the sunsets.}} 
+  \caption{Light absorbing molecules influence the atmosphere's visual character. Our method enables the rendering of atmospheres with (left picture) or without (right picture) oxygen and ozone molecules. The ozone presence is reflected as a deeper bluish color seen above the sunsets.}
   \label{fig:ozone}
   \vspace*{-3.5mm}  
 \end{figure}
@@ -576,7 +573,7 @@ In the next section, we present two different ways to account for molecule energ
 Given a volume density of particles $\rho$, in a medium with absorption cross section $\sigma^{abs}$, the absorption coefficient $\beta^{abs}$ can be defined as $\beta^{abs} =\rho\sigma^{abs} $, \textit{i.e.}, the absorption cross-section area per unit volume.
 
 It's essential to notice that the number of particles per unit of volume is not constant with the height in planetary atmospheres.  
-For the \review{oxygen} molecule, in particular, we use the absorption \review{cross-section} measurements available in~\cite{Bogumil:2003}, and together with the volume density of oxygen in the air, we obtained the oxygen absorption coefficient:
+For the oxygen molecule, in particular, we use the absorption cross-section measurements available in~\cite{Bogumil:2003}, and together with the volume density of oxygen in the air, we obtained the oxygen absorption coefficient:
 
 \vspace*{-2mm}
 \begin{equation} \label{eq:beta-oxygen}   
@@ -586,7 +583,7 @@ For the \review{oxygen} molecule, in particular, we use the absorption \review{c
 
 The volume density (concentration) of oxygen particles in the dry air $\rho_{O_2}(h)$ gives the number of oxygen molecules per unit of volume at a given height (in $km$).
 
-In Earth's atmosphere, the \review{concentration of oxygen molecules} is described by a hydrostatic concentration function multiplied by the oxygen percentage in dry air:
+In Earth's atmosphere, the concentration of oxygen molecules is described by a hydrostatic concentration function multiplied by the oxygen percentage in dry air:
 
 \vspace*{-2.5mm}
 % N_Earth = 2.68735\times10^{25}
@@ -601,13 +598,13 @@ Once available, the $\beta^{abs}_{O_2}$ is used in the transmittance $T(\vec{x},
 \vspace*{-2mm}
 \subsubsection{Ozone Layer}\label{section:Ozone}
 
-For Earth's atmosphere, the ozone molecule is particularly important. The ozone layer, the absorption layer of ozone molecules in Earth's atmosphere, absorbs light \review{in} a specific spectrum~\cite{Horshelev:2014, Serdyuchenko:2014} and \review{thus} responsible for the bluish colors during twilight~\cite{Adams:1974}.
+For Earth's atmosphere, the ozone molecule is particularly important. The ozone layer, the absorption layer of ozone molecules in Earth's atmosphere, absorbs light in a specific spectrum~\cite{Horshelev:2014, Serdyuchenko:2014} and thus responsible for the bluish colors during twilight~\cite{Adams:1974}.
 
 We used previously published absorption cross-section measurements for the molecules of ozone and the ozone density of particles in Earth's atmosphere, to find the absorption coefficient for the ozone molecule as a function of height~\cite{Keller:2013, Hannelore:2013}.
 
 The ozone's density of particles per volume is also known as the ozone concentration profile. Different from the oxygen molecules in Earth's atmosphere, it is not represented by a hydrostatic concentration function but by its specific concentration function. 
 
-This concentration function varies during different locations and times of the year. In our atmospheric model, we use a well-known concentration profile~\cite{US_atmosphere:1976}. To obtain a continuous mathematical representation of the data for integration in \autoref{eq:transmittance}, we fitted a piecewise cubic spline $\rho_{O_3}(h)$ over the available data (see the \review{supplementary material} for details).
+This concentration function varies during different locations and times of the year. In our atmospheric model, we use a well-known concentration profile~\cite{US_atmosphere:1976}. To obtain a continuous mathematical representation of the data for integration in \autoref{eq:transmittance}, we fitted a piecewise cubic spline $\rho_{O_3}(h)$ over the available data (see the supplementary material for details).
 
 \vspace*{-2mm}
 \begin{equation} \label{eq:beta-ozone}
@@ -624,16 +621,15 @@ The results of this new absorption layer can be seen in \autoref{fig:ozone}.
 % Before reviewers
 % Other molecules are also capable of absorbing radiant energy. In Earth's case, besides the $O_3$ and $O_2$ molecules, the most notable ones are the molecules of $CO_2$ and $H_2O$. Their absorb cross-sections values approximate to zero when the wavelength of the incident light is larger than $180\text{nm}$~\cite{Shemansky:1972}, and $362\text{nm}$~\cite{Lampel:2015} respectively. The molecules in Mars' atmosphere do not absorb light in the wavelength range we are considering in this work~\cite{Haberle:2017}. 
 
-\review{
 Other molecules are also capable of absorbing radiant energy. For Earth, besides the $O_3$ and $O_2$ molecules, the most notable ones are $CO_2$ and $H_2O$. These molecules' absorbing cross-sections values are close to zero when the incident light's wavelength is higher than $180\text{nm}$~\cite{Shemansky:1972} and smaller than $362\text{nm}$~\cite{Lampel:2015}. Other molecules such as $H_2O_2$, $NO_2$, $NO_3$, and $CH_3$ do not occur in concentrations high enough to be taken into account in our visualizations. The molecules in Mars' atmosphere do not absorb light in the visible wavelength range~\cite{Haberle:2017}. 
-}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Absorption and Scattering by Large Particles}
 
 \noindent \textbf{Mie Scattering} \quad If the radius of the particle is much bigger than the wavelength of the incident photon, Rayleigh scattering no longer explains the observable values. In this case, the \textit{Mie-Debye} scattering theory must be used to describe the light scattering by those particles. 
 
-The Mie scattering equations can be computationally expensive to compute since they are given by a direct solution of Maxwell's equations in the form of a series of Riccati-Bessel functions~\cite{Hulst:1981, Mishchenko:2006}. A much more common approach is to use approximations for the Mie scattering and \review{absorption} coefficients and the Mie phase function.
+The Mie scattering equations can be computationally expensive to compute since they are given by a direct solution of Maxwell's equations in the form of a series of Riccati-Bessel functions~\cite{Hulst:1981, Mishchenko:2006}. A much more common approach is to use approximations for the Mie scattering and absorption coefficients and the Mie phase function.
 
 In our atmospheric model, we propose the use of a \textit{Double Henyey-Greenstein} (DHG) phase function~\cite{Kattawar:1975} with the parameters controlling the forward ($g_1$) and backward ($g_2$) scatterings and the forward-backward ratio $\alpha$ as functions of the wavelength of the incident light:
 
@@ -648,9 +644,9 @@ P_M(\theta, g_1(\lambda), g_2(\lambda), \alpha(\lambda)) = \bigg[ \alpha\frac{(1
 }
 \vspace*{-3.5mm}
 
-\noindent where $g_i(\lambda) \in [-1, 1]$ and $\alpha \in [0, 1]$. The new added dependency \review{on wavelength} is direct, \textit{i.e.}, $g_i(\lambda)$ has different values for different $\lambda$ by experimental findings.
+\noindent where $g_i(\lambda) \in [-1, 1]$ and $\alpha \in [0, 1]$. The new added dependency on wavelength is direct, \textit{i.e.}, $g_i(\lambda)$ has different values for different $\lambda$ by experimental findings.
 %
-We adopted the DHG phase function because of its ability \review{to model} the scattering phase functions from Mars' dust~\cite{Chen:2019} and \review{its} high degree of parametrization.
+We adopted the DHG phase function because of its ability to model the scattering phase functions from Mars' dust~\cite{Chen:2019} and its high degree of parametrization.
 
 To avoid the computational burden of calculating the Mie's equations, we use an approximation of the scattering coefficient $\beta_M^{scat}(h, \lambda)$, based on the approximations given by van de Hulst~\cite{Hulst:1981}:
 
@@ -661,12 +657,11 @@ To avoid the computational burden of calculating the Mie's equations, we use an 
 \end{equation}
 \vspace*{-3mm}
 
-\review{
 In \autoref{eq:mie-scattering}, the concentration factor $C(T)=(0.65T-0.65) \cdot 10^{-16}$ \cite{Morales:2017} is a function of the \textit{turbidity} $T$ (a measure of the atmosphere's haziness of a medium), and $H_M$ and $h$ are the Mie's scale height and height from the planet's surface, respectively. 
-Also in \autoref{eq:mie-scattering}, $K$ is a wavelength-dependent fudge factor (an approximation of the integral of the scattering efficiency times the particles' radius as proposed by F. W. P. G\"otz in \cite{VSNGBook:1944}).} The value $\nu$ is known and the \textit{Junge's exponent} and must be in the interval $[2, 6]$~\cite{Hulst:1981}. In the specialized literature and in our results we always use $3 \leq \nu \leq 4$, \textit{i.e.}, Mie's scattering has a $\lambda^{-1}$ or $\lambda^{-2}$ dependency for scattering light.\\
+Also in \autoref{eq:mie-scattering}, $K$ is a wavelength-dependent fudge factor (an approximation of the integral of the scattering efficiency times the particles' radius as proposed by F. W. P. G\"otz in \cite{VSNGBook:1944}). The value $\nu$ is known and the \textit{Junge's exponent} and must be in the interval $[2, 6]$~\cite{Hulst:1981}. In the specialized literature and in our results we always use $3 \leq \nu \leq 4$, \textit{i.e.}, Mie's scattering has a $\lambda^{-1}$ or $\lambda^{-2}$ dependency for scattering light.\\
 
 \vspace*{-3.5mm}
-\noindent \textbf{Mie Extinction} \quad \review{Like in calculating the Mie scattering coefficient, the Mie extinction coefficient computation can be computationally expensive.} In order to avoid those heavy computations, we use the anomalous diffraction approximation for absorbing spheres proposed by van~de~Hust~\cite{Hulst:1981}.
+\noindent \textbf{Mie Extinction} \quad Like in calculating the Mie scattering coefficient, the Mie extinction coefficient computation can be computationally expensive. In order to avoid those heavy computations, we use the anomalous diffraction approximation for absorbing spheres proposed by van~de~Hust~\cite{Hulst:1981}.
 
 For absorbing spheres with radius $r$ and complex refractive index $n(\lambda) = m(\lambda) + k(\lambda)i$, and incident light with wavelength $\lambda$, the Mie extinction coefficient is given by:
 
@@ -706,7 +701,7 @@ To keep the computational loading small, we consider only layers of particles wi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Non-Linear Light Path Inside the Atmosphere}\label{section:nlp}
 
-To correctly calculate the travel distance of a light ray inside the atmosphere, the variation of medium's density with the height must be taken into account. This density variation causes atmospheric refraction, \textit{i.e.}, light does not follow a linear path through the atmosphere, but an approximately elliptical one. In our atmospheric model for \textit{Earth}, we use the Pickering's approximation \cite{Pickering:2002} to obtain the correct traveled distance for the ray inside the atmosphere. \review{The ratio of the distance $s(\theta)$ displaced by a light ray (with zenith angle $\theta$) through the atmosphere to the perpendicular distance $r_{\text{atm}}$ between the ground and the top of the atmosphere, is defined as the \textit{air mass coefficient AM}}.
+To correctly calculate the travel distance of a light ray inside the atmosphere, the variation of medium's density with the height must be taken into account. This density variation causes atmospheric refraction, \textit{i.e.}, light does not follow a linear path through the atmosphere, but an approximately elliptical one. In our atmospheric model for \textit{Earth}, we use the Pickering's approximation \cite{Pickering:2002} to obtain the correct traveled distance for the ray inside the atmosphere. The ratio of the distance $s(\theta)$ displaced by a light ray (with zenith angle $\theta$) through the atmosphere to the perpendicular distance $r_{\text{atm}}$ between the ground and the top of the atmosphere, is defined as the \textit{air mass coefficient AM}.
 
 % \begin{figure}[tb]
 %  \centering 
@@ -721,26 +716,24 @@ In Pickering's method, the Rayleigh air mass coefficient can be determined by th
 
 \vspace*{-3mm}
 {
-\review{
   \small
 \begin{align} \label{eq:airmass}
 AM =\ \frac{s(\theta)}{r_{\text{atm}}} = \frac{1}{sin\Big((90 - \theta) + \frac{244}{(165 + 47\cdot(90 - \theta)^{1.1})}\Big)}
 %h_\theta =&\ 90 - \theta \notag 
 \end{align}
 }
-}
 \vspace*{-3mm}
 
 %It's essential to notice that Pickering's approximation is based on tabulated values for Earth's atmosphere, not applicable to Mars' atmosphere, for example.
 
-The length difference, when considering the correct length of a light ray inside the atmosphere \review{$s(\theta)$}, is directly reflected in the final value of the ray's transmittance. As the distance traveled increases, the extinction probability for each photon increases, too. In Earth's case, this is translated to an increase in the scattering of blue light.
+The length difference, when considering the correct length of a light ray inside the atmosphere $s(\theta)$, is directly reflected in the final value of the ray's transmittance. As the distance traveled increases, the extinction probability for each photon increases, too. In Earth's case, this is translated to an increase in the scattering of blue light.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \vspace*{-1mm}
 \section{Implementation}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-Today modern graphics hardware can interactively compute and display first orders ($L_0$ and $L_1$) terms from \autoref{eq:ATM_VRE_lin_op}. To do that, the number of samples used in the integration is small, and a simplified atmospheric model (no scattering by large particles, no wavelength dependency, no complex refraction indexes, no absorption by molecules, and other simplifications) is used~\cite{Hoffman:2002, ONeil2004}. However, current GPUs are not powerful enough to interactively compute and visualize all the terms in \autoref{eq:ATM_VRE_lin_op}, and the high order terms are essential to correctly display the colors of an atmosphere during sunset and sunrise.
+Today modern graphics hardware can interactively compute and display first order ($L_0$ and $L_1$) terms from \autoref{eq:ATM_VRE_lin_op}. To do that, the number of samples used in the integration is small, and a simplified atmospheric model (no scattering by large particles, no wavelength dependency, no complex refraction indexes, no absorption by molecules, and other simplifications) is used~\cite{Hoffman:2002, ONeil2004}. However, current GPUs are not powerful enough to interactively compute and visualize all the terms in \autoref{eq:ATM_VRE_lin_op}, and the high order terms are essential to correctly display the colors of an atmosphere during sunset and sunrise.
 
 To visualize atmospheres in real-time with high order scattering and a complex atmospheric model, we use an incremental algorithm as presented by Elek~\cite{Elek:2009} and Bruneton~\cite{BrunetonNeyret:2008} and applied some generalizations and observations to decrease the computational load:
 \begin{itemize}
@@ -759,13 +752,12 @@ To visualize atmospheres in real-time with high order scattering and a complex a
 	\vspace{-2.5mm}
 \end{itemize}
 
-The incremental algorithm computes one scattering order at a time ($L_i$ in \autoref{eq:ATM_VRE_lin_op}), until the $n^{\text{th}}$ iteration ($n$ is \review{a user input}), using the computation of the previous order to do it, and stores the produced data in tables to be used later during the rendering phase.
+The incremental algorithm computes one scattering order at a time ($L_i$ in \autoref{eq:ATM_VRE_lin_op}), until the $n^{\text{th}}$ iteration ($n$ is a user input), using the computation of the previous order to do it, and stores the produced data in tables to be used later during the rendering phase.
 
 The rendering algorithm is a modified version of the algorithm by Bruneton \etal ~\cite{BrunetonNeyret:2008}. It takes into account the occlusion information for first order scattering and uses the tabulated data of the precomputation algorithm to generate the final images. The algorithm is implemented in a hybrid graphics pipeline (deferred and forward rendering) in the OpenSpace system~\cite{OpenSpace:2020, bock18openspace}, using modern C++ and OpenGL. Our implementation is available in the OpenSpace GitHub repository.
 
 
 \begin{algorithm}[bth]\label{alg:rendering}
-\review{
   \small
   \SetAlgoLined
   \SetKwInOut{KwIn}{Input}
@@ -807,25 +799,22 @@ The rendering algorithm is a modified version of the algorithm by Bruneton \etal
     }
   }
   \caption{Rendering Algorithm}
- } %review
  \end{algorithm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace*{-1mm}
 \subsection{Precomputations}
 
-Initially, the values for the transmittance $T(\vec{x}, \vec{x_0})$, in a perfectly spherical planet and atmosphere, are precomputed for different angles and heights and stored in a \review{32-bit} float \review{2D} texture. \review{The texture is indexed by height $r$ of the observer at point $\vec{x}$ ($r = ||\vec{x}||$), and cosine $\mu$ of the angle $\theta$ between the view zenith direction and the normalized view direction $\vec{v}$, \textit{i.e.}, $\mu = cos(\theta) = (\vec{v}\bullet\vec{x})/r$
-} Next, the values of the irradiance $E(\vec{x}, \vec{\omega})$ and in-scattering $S(\vec{x}, \vec{\omega})$, both for all possible incoming directions $\vec{\omega}$ of directly light $L_0$, are also precomputed and stored in two \review{separate 32-bit} float texture tables (2D and 4D tables respectively). Using the initial computations for $E$ and $S$, the algorithm iterates on the number of desired scattering orders $n$ computing the increments on the irradiance and the in-scattering values.
+Initially, the values for the transmittance $T(\vec{x}, \vec{x_0})$, in a perfectly spherical planet and atmosphere, are precomputed for different angles and heights and stored in a 32-bit float 2D texture. The texture is indexed by height $r$ of the observer at point $\vec{x}$ ($r = ||\vec{x}||$), and cosine $\mu$ of the angle $\theta$ between the view zenith direction and the normalized view direction $\vec{v}$, \textit{i.e.}, $\mu = cos(\theta) = (\vec{v}\bullet\vec{x})/r$. Next, the values of the irradiance $E(\vec{x}, \vec{\omega})$ and in-scattering $S(\vec{x}, \vec{\omega})$, both for all possible incoming directions $\vec{\omega}$ of directly light $L_0$, are also precomputed and stored in two separate 32-bit float texture tables (2D and 4D tables respectively). Using the initial computations for $E$ and $S$, the algorithm iterates on the number of desired scattering orders $n$ computing the increments on the irradiance and the in-scattering values.
 
-\review{
 Like the transmittance mapping, the irradiance and in-scattering tables are also mapped using the observer's position. The cosine of the angle between the view zenith and the light source position $\vec{s}$ %(see \autoref{fig:atm-model}) 
 is the second coordinate in the irradiance table, and the cosine of the angle between the light position and the view position, the second coordinate in the in-scattering table.
-}
+
 %
 % Text before reviwers suggestions
 %Like for the transmittance, the tables for the irradiance and in-scattering are also mapped using the observer's position inside the atmosphere (or on top), but in the irradiance case, also the cosine of the angle between the view zenith and the light source position $\vec{s}$ (see \autoref{fig:atm-model}), and for in-scattering table the cosine of the angle between the light position and the view position.
 %
-\review{This mapping is directly translated to a 4D table, stored in the GPU as a 3D texture interpolated by user code and not through OpenGL's automatic hyperbolic interpolation process in the $4^{\text{th}}$ dimension.}
+This mapping is directly translated to a 4D table, stored in the GPU as a 3D texture interpolated by user code and not through OpenGL's automatic hyperbolic interpolation process in the $4^{\text{th}}$ dimension.
 %
 For more details about the interpolation mapping and precomputation algorithm refer the reader to the work from Bruneton\cite{BrunetonNeyret:2008} and Yusov\cite{Yusov:2013}.
 
@@ -839,7 +828,7 @@ The distance between the first intersection $\vec{y}$ and the camera position is
 
 The reflection contribution, $R[L_0]$ in \autoref{eq:ATM_VRE_lin_op} is directly calculated once we know the BRDF (the constant diffuse term $c$), the normal at the intersection position (obtained from the normal buffer in the GBuffers) and the transmittance along the ray: $R[L_0] = T(\vec{x}, \vec{y}) \cdot c \cdot (\vec{s}\bullet\vec{n})E[L_0]$.
 
-Finally, the irradiance and in-scattering tables are used to obtain the high-order terms in \autoref{eq:ATM_VRE_lin_op}. To compute $S[L_i]$, we use \review{the fact that} the scattering contribution from a ray of length $||\vec{y}-\vec{x}||$ is the same as the scattering contribution for a rays $(\vec{x_0}-\vec{x}) - (\vec{x_0}-\vec{y})$:  $S(\vec{x}\rightarrow \vec{y}, \vec{\omega}, \lambda) = S(\vec{x}, \vec{\omega}, \lambda) - T(\vec{x}, \vec{y})S(\vec{y}, \vec{\omega}, \lambda)$~\cite{ONeil:2005, Schafhitzel:2007}. This identity is reflected in the \textit{aerial perspective}: the appearance of objects as they are seen from a distance. \review{We depicted the core steps of the rendering algorithm as a pseudo-code in Algorithm~\autoref{alg:rendering}.} \review{Once all pixel's contributions have been made, we adjust the final color applying an exponential tone mapping operator.} To work with various atmospheres simultaneously, we implemented a \textit{ping-pong} mechanism between two different rendering buffers into OpenSpace. \review{Also, we use double precision on the initial intersection calculations to work with all possible huge distances in an astrovisualization system.}
+Finally, the irradiance and in-scattering tables are used to obtain the high-order terms in \autoref{eq:ATM_VRE_lin_op}. To compute $S[L_i]$, we use the fact that the scattering contribution from a ray of length $||\vec{y}-\vec{x}||$ is the same as the scattering contribution for a rays $(\vec{x_0}-\vec{x}) - (\vec{x_0}-\vec{y})$:  $S(\vec{x}\rightarrow \vec{y}, \vec{\omega}, \lambda) = S(\vec{x}, \vec{\omega}, \lambda) - T(\vec{x}, \vec{y})S(\vec{y}, \vec{\omega}, \lambda)$~\cite{ONeil:2005, Schafhitzel:2007}. This identity is reflected in the \textit{aerial perspective}: the appearance of objects as they are seen from a distance. We depicted the core steps of the rendering algorithm as a pseudo-code in Algorithm~\autoref{alg:rendering}. Once all pixel contributions have been made, we adjust the final color applying an exponential tone mapping operator. To work with various atmospheres simultaneously, we implemented a \textit{ping-pong} mechanism between two different rendering buffers into OpenSpace. Also, we use double precision on the initial intersection calculations to work with all possible huge distances in an astrovisualization system.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The next section can be removed and the info added to the results section to save space.
@@ -867,18 +856,16 @@ Finally, the irradiance and in-scattering tables are used to obtain the high-ord
 
 \begin{figure}[t]
   \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
-  \review{
   %\fbox{\includegraphics[width=0.99\linewidth]{Earth-Comp-New-New.jpg}}
   \fbox{\includegraphics[width=0.99\linewidth]{figures/Epic-Jon-Carter.png}}
   \vspace*{-6mm}
   \caption{Earth's Atmosphere seen from space. (left) Taken by NASA's Earth Polychromatic Imaging Camera (EPIC), (right) generated by OpenSpace system using the our method with the parameters in \autoref{sec:Earth_ATM}.}
   \label{fig:Earth-comparison}
-  } % review
   \vspace*{-2mm}
 \end{figure}
 
 In this section, we describe the quality and performance of our method using experimental data from the scientific community to generate and validate the visualization of Earth's and Mars' atmospheres. 
-\review{Earth's data shows how well our atmospheric model describes a thoroughly studied and understood planet atmosphere. At the same time, Mars' data is used to generate a visualization of a planet's atmosphere is not as thoroughly understood.} We also plot the generated data from our Earth's atmosphere against the CIE clear sky model~\cite{Darula:2002} for Earth's atmosphere to validate our atmospheric model. All tests were performed with an Intel Core i7-5930K and an NVIDIA GeForce GTX 1080 Ti GPU.
+Earth's data shows how well our atmospheric model describes a thoroughly studied and understood planet atmosphere. At the same time, Mars' data is used to generate a visualization of a planet's atmosphere is not as thoroughly understood. We also plot the generated data from our Earth's atmosphere against the CIE clear sky model~\cite{Darula:2002} for Earth's atmosphere to validate our atmospheric model. All tests were performed with an Intel Core i7-5930K and an NVIDIA GeForce GTX 1080 Ti GPU.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace*{-1.5mm}
@@ -890,17 +877,14 @@ In this section, we describe the quality and performance of our method using exp
 %   \label{fig:Himalayas}
 % \end{figure}
 
-\review {
 Our model implementation allows the user (from domain experts to the general public) to interact with the atmospheric parameters in two modes: standard (simplified parameters) or advanced mode. 
 
 \begin{figure}[t]
   \centering
-  \review{
   \fbox{\includegraphics[width=0.99\linewidth]{figures/Hawaii-Jon-Carter.jpg}}
   \vspace*{-6mm}
   \caption{Hawaii Islands seen from the International Space Station (ISS). The picture on the left was taken from the International Space Station by NASA, while the image on the right was generated by OpenSpace using our new atmospheric model using the advanced parameters mode.}
   \label{fig:Hawaii-comp}
-  } % review
   \vspace*{-3.5mm}
 \end{figure}
 
@@ -910,7 +894,6 @@ The standard parameters mode uses the Rayleigh and Mie coefficients ($\beta_R^{s
 %
 \begin{figure*}
  \centering
- \review{
  %\includegraphics[width=\columnwidth]{Mars-Rover-small}
 %  \fbox{\includegraphics[width=0.99\linewidth]{figures/Sunsets-Mars-Comp.jpg}}
 %  \caption{Mars sunsets: (left) Using the technique in Collienne~\cite{Collienne:2013} that simulates Mars' atmosphere colors with Rayleigh Scattering. (center) Our method that produces colors through the scattering and absorption of light by the dust particles in Mars' atmosphere. (right) Picture taken by NASA's Mars Exploration Rover (Credit NASA/JPL-Caltech/Texas A\&M/Cornell).}
@@ -918,12 +901,10 @@ The standard parameters mode uses the Rayleigh and Mie coefficients ($\beta_R^{s
  \vspace*{-4mm}
  \caption{Mars sunsets: (left) Using the technique in Collienne~\cite{Collienne:2013} that simulates Mars' atmosphere colors with Rayleigh Scattering. (center) Our method that produces colors through the scattering and absorption of light by the dust particles in Mars' atmosphere. (right) Picture taken by NASA's Curiosity Mars rover (Credit NASA/JPL-Caltech/MSSS/Texas A\&M Univ.).}
  \label{fig:Mars-Rover_and_Comp_Models}
- } % review
 \end{figure*}
 %
 \begin{figure*} 
  \centering
- \review{
 %  \fbox{\includegraphics[width=\textwidth]{figures/Mars-CO2-dust.jpg}}
 %  \caption{Mars viewed from the space. On the left, a photo taken by the Hubble telescope, on the middle we can see a visualization of Mars inside the OpenSpace Astrovisualization system as the only lighting effect occurring is Rayleigh scattering, \textit{i.e.}, only $CO_2$ and no Mie scattering due to dust particles, and on the right Mars' atmosphere rendered with Mie effects from parameters described in \autoref{sec:Mars_ATM}.}
   \fbox{\includegraphics[width=\textwidth]{figures/Mars-Hubble-Comp.jpg}}
@@ -931,7 +912,6 @@ The standard parameters mode uses the Rayleigh and Mie coefficients ($\beta_R^{s
   \caption{Mars viewed from space. \textbf{A:} photo taken by the Hubble telescope, \textbf{B:} visualization with Rayleigh scattering only, \textit{i.e.}, only $CO_2$ and no Mie scattering due to dust particles, \textbf{C:} atmosphere rendered with Mie effects from parameters described in \autoref{sec:Mars_ATM}, and \textbf{D:} atmosphere with same parameters as in \textbf{C} but with 20\% more particles suspended in the air. Note that the Mie scattering dominates due to the large number of particles}
  \label{fig:Mars-Ray-Mie}
  \vspace*{-2mm}
- } % review
 \end{figure*}
 %
 Note that in the standard mode, Mie scattering and absorption (and thus the phase functions) are not wavelength-dependent. Even in standard mode, when the number of parameters is limited, our atmospheric model can reproduce Earth's atmosphere with high accuracy (see \autoref{fig:Hawaii-comp}). 
@@ -950,7 +930,7 @@ Another challenge is that we do not have all the physical parameters (e.g., weat
 Finally, it is important to point out that our atmospheric model approximates the physical effects happening in the actual atmosphere; the Mie equations are not solved for each light interaction. 
 
 % Titan Picture??
-}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Text before review (after reviewers data)
@@ -1027,7 +1007,6 @@ Finally, it is important to point out that our atmospheric model approximates th
 \begingroup
 \setlength{\tabcolsep}{0.2em}
 \begin{table}[t]
-\review{
   \centering
   \begin{tabular}{|p{1.5cm}|p{3.2cm} p{3.2cm}|}
     \hline
@@ -1061,7 +1040,6 @@ Finally, it is important to point out that our atmospheric model approximates th
   \vspace*{0.2cm}
   \caption{Atmospheric parameters used in the standard (S) and advanced mode (A) to generate Figures~\ref{fig:Earth-comparison}, \ref{fig:Hawaii-comp}, \ref{fig:Mars-Rover_and_Comp_Models}, and \ref{fig:Mars-Ray-Mie}. We used a temperature equals to $273\,\text{K}$ when possible, converting the data accordingly.}
   \label{tab:parameters}
-} % \review
 \vspace*{-8mm}
 \end{table}
 \endgroup
@@ -1070,36 +1048,30 @@ Finally, it is important to point out that our atmospheric model approximates th
 \vspace*{-1.5mm}
 \subsection{Mars' Atmosphere}\label{sec:Mars_ATM}
 
-\review{As in Earth, the Martian atmosphere's primary scattering process involving atoms and molecules is the Rayleigh scattering~\cite{Haberle:2017}.}
-Mars' atmosphere is much thinner and \review{is composed of 95.32\% carbon dioxide~\cite{MarsFact:2018}, which is the principal scattering cross-section contributing to the Rayleigh phenomenon}. Unlike Earth's atmosphere, \review{specific} values for the scattering coefficients of Mars' atmosphere are not available~\cite{Haberle:2017}. However, molecular scattering cross-sections for different wavelengths of the incident light, like $CO_2$ (obtained from experimental measurements) are available~\cite{Sneep:2005}. Together with the values of the refractive indices $n(\lambda)$~\cite{Bideau:1973} for $CO_2$, they can be used to compute $CO_2$'s Rayleigh scattering coefficients~\cite{Ityaksov:2008}. Although the authors of these works do not validate the extrapolation of values for wavelengths above $532\,\text{nm}$, \review{the visual results agree with the theory}. $CO_2$ absorbs radiant energy, but this absorption is only notable for incident light with wavelengths smaller than \review{approximately} $250\,\text{nm}$~\cite{Haberle:2017, Ityaksov:2008}, \review{which is} out of the range of wavelengths we are considering. 
+As in Earth, the Martian atmosphere's primary scattering process involving atoms and molecules is the Rayleigh scattering~\cite{Haberle:2017}.
+Mars' atmosphere is much thinner and is composed of 95.32\% carbon dioxide~\cite{MarsFact:2018}, which is the principal scattering cross-section contributing to the Rayleigh phenomenon. Unlike Earth's atmosphere, specific values for the scattering coefficients of Mars' atmosphere are not available~\cite{Haberle:2017}. However, molecular scattering cross-sections for different wavelengths of the incident light, like $CO_2$ (obtained from experimental measurements) are available~\cite{Sneep:2005}. Together with the values of the refractive indices $n(\lambda)$~\cite{Bideau:1973} for $CO_2$, they can be used to compute $CO_2$'s Rayleigh scattering coefficients~\cite{Ityaksov:2008}. Although the authors of these works do not validate the extrapolation of values for wavelengths above $532\,\text{nm}$, the visual results agree with the theory. $CO_2$ absorbs radiant energy, but this absorption is only notable for incident light with wavelengths smaller than approximately $250\,\text{nm}$~\cite{Haberle:2017, Ityaksov:2008}, which is out of the range of wavelengths we are considering. 
 
-\review{
 We were able to calculate the absorption coefficients for the $CO_2$ in Mars' atmosphere using data from \cite{Sneep:2005, Ityaksov:2008} and the refractive index of $CO_2$. 
-Given the concentration of $CO_2$ in Mars $\rho_{CO2}$, and the respective molecular scattering cross-section, we obtained the Rayleigh scattering coefficients for the $CO_2$ molecules on Mars (see \autoref{tab:parameters}). However, for an observer close to the ground inside Mars' atmosphere, the aerosol particles (dust) tend to be most prevalent [21], and Mie scattering dominates Rayleigh scattering.} The dust particles in Mars (plagioclase feldspar and zeolite) \review{contain both fine and coarse grains of} hematite ($\alpha - Fe_2O_3$)~\cite{Christensen:2001}, an iron oxide with a complex refractive index ranging from the hundredths in the red spectrum to more than one in the blue spectrum. The particles with fine-grained hematite scatter more strongly longer visible wavelengths and appear red, while coarse-grained particles appear gray. This effect explains the Mars' red color and part of its atmosphere color. Hematite absorbs radiant energy too. Ehlers~\etal ~\cite{Ehlers:2014} show that the absorption properties of the hematite are responsible only for the mildly bluish appearance of the Sun's disk at sunset and not the blue glow surrounding the Sun in Mars. The blue glow is caused by the dominance of blue in near-forward scattered light inside the Martian atmosphere. 
+Given the concentration of $CO_2$ in Mars $\rho_{CO2}$, and the respective molecular scattering cross-section, we obtained the Rayleigh scattering coefficients for the $CO_2$ molecules on Mars (see \autoref{tab:parameters}). However, for an observer close to the ground inside Mars' atmosphere, the aerosol particles (dust) tend to be most prevalent [21], and Mie scattering dominates Rayleigh scattering. The dust particles in Mars (plagioclase feldspar and zeolite) contain both fine and coarse grains of hematite ($\alpha - Fe_2O_3$)~\cite{Christensen:2001}, an iron oxide with a complex refractive index ranging from the hundredths in the red spectrum to more than one in the blue spectrum. The particles with fine-grained hematite scatter more strongly longer visible wavelengths and appear red, while coarse-grained particles appear gray. This effect explains the Mars' red color and part of its atmosphere color. Hematite absorbs radiant energy too. Ehlers~\etal ~\cite{Ehlers:2014} show that the absorption properties of the hematite are responsible only for the mildly bluish appearance of the Sun's disk at sunset and not the blue glow surrounding the Sun in Mars. The blue glow is caused by the dominance of blue in near-forward scattered light inside the Martian atmosphere. 
 
-Collienne~\etal ~\cite{Collienne:2013} presented a physically based approach based on the Rayleigh scattering process. Their strategy was to select the appropriate wavelengths for the Rayleigh scattering coefficient in a way to resemble the physical process occurring between the light and the aerosol particles within Mars' atmosphere, \textit{i.e.}; they adjusted the scattering coefficients in a way that longer wavelengths are scattered with a higher probability than shorter wavelengths. \review{Therefore, red light with long wavelengths is scattered throughout the atmosphere, and blue light with short wavelengths is absorbed.} \review{Their approach produces images of a yellowish atmosphere with bluish sunset and sunrises. However, it lacks simulation of all atmospheric effects like the blueish limb color in Mars' atmosphere and the correct glow and blue colors for the Sun seen on Mars~(see \autoref{fig:Mars-Rover_and_Comp_Models}).}
+Collienne~\etal ~\cite{Collienne:2013} presented a physically based approach based on the Rayleigh scattering process. Their strategy was to select the appropriate wavelengths for the Rayleigh scattering coefficient in a way to resemble the physical process occurring between the light and the aerosol particles within Mars' atmosphere, \textit{i.e.}; they adjusted the scattering coefficients in a way that longer wavelengths are scattered with a higher probability than shorter wavelengths. Therefore, red light with long wavelengths is scattered throughout the atmosphere, and blue light with short wavelengths is absorbed. Their approach produces images of a yellowish atmosphere with bluish sunset and sunrises. However, it lacks simulation of all atmospheric effects like the blueish limb color in Mars' atmosphere and the correct glow and blue colors for the Sun seen on Mars~(see \autoref{fig:Mars-Rover_and_Comp_Models}).
 
-\review{
 To simulate the Mie scattering and absorption properties of Mars' dust, we used the parameters in \autoref{tab:parameters}. We found some of the parameters in \autoref{tab:parameters} (like the turbidity $T$), iteratively, in order to simulate the desired weather condition (amount of suspended dust in the atmosphere) inside the Martian atmosphere.
-}
 
 \begin{figure}
   \centering
   %\includegraphics[width=\linewidth]{validation_curves}
   \includegraphics[width=\linewidth]{figures/validation-smaller.png}
   \vspace*{-7mm}
-  \caption{The sky luminance over the zenith luminance for different Sun positions and view angles for Earth's atmosphere. The result of our advanced parametric model (green line) shows good agreement with the CIE Sky model type 12 (CIE Standard Clear Sky, low luminance turbidity) (blue line) and does not display the overestimation near the horizon displayed in other models \review{\cite{BrunetonNeyret:2008, Preetham:1999} pointed out by Zotti \etal \cite{Zotti:2007}}.}
+  \caption{The sky luminance over the zenith luminance for different Sun positions and view angles for Earth's atmosphere. The result of our advanced parametric model (green line) shows good agreement with the CIE Sky model type 12 (CIE Standard Clear Sky, low luminance turbidity) (blue line) and does not display the overestimation near the horizon displayed in other models \cite{BrunetonNeyret:2008, Preetham:1999} pointed out by Zotti \etal \cite{Zotti:2007}.}
   \label{fig:validation_curves}
   \vspace*{-6mm}
 \end{figure}
 
-
-\review {
 To evaluate our atmospheric model and visualization of Mars, we compared the results with Mars's photographs, available at NASA's website. The middle picture in \autoref{fig:Mars-Rover_and_Comp_Models} is a visualization of the Mars' sunset obtained by our atmospheric model adapted for Mars' atmosphere. Compared to the real picture of the Martian sunset taken by the Mars Exploration Rover on the right, we can see the correct colors displayed in twilight times. When comparing the picture from the Hubble telescope of Mars' atmosphere with our generated visualization, in \autoref{fig:Mars-Ray-Mie}, we can see even the bluish limb characteristic from Mars.
 
 In both pictures generated by our atmospheric model, we can see some differences in color and brightness when comparing to the photographs. The difference in brightness can be explained by the tone mapping parameters.  The color differences are likely due to the approximation of the Mie's physical process by the anomalous diffraction approximation and the DHG phase function.
 % used on these pictures and the physical configuration used when the photographs they do not explain the color differences. The color differences are, in our XXXXX opinion, \joncomment{An expert?} the result of better parameter selections and the approximation of the Mie's physical process by the anomalous diffraction approximation and the DHG phase function.
-}
 
 % Text before reviwers suggestions
 % To evaluate our atmospheric model and visualization of Mars, we compared them with the source photos from Mars, available at NASA's website. The middle picture in \autoref{fig:Mars-Rover_and_Comp_Models} is a visualization of the Mars' sunset obtained by our atmospheric model adapted for Mars' atmosphere. Compared to a the real picture of the Martian sunset taken by the Mars Exploration Rover on the right, we can see the correct colors displayed in the twilight times. Also, when comparing the Mars' atmosphere picture from the Hubble telescope with our generated visualization, in \autoref{fig:Mars-Ray-Mie}, we can see even the bluish limb characteristic from Mars.
@@ -1138,8 +1110,8 @@ In both pictures generated by our atmospheric model, we can see some differences
 %\vspace*{-1.5mm}
 \subsection{Comparison of Earth's Atmosphere with CIE Atmospheric Model}\label{sec:cie_model}
 
-\autoref{fig:validation_curves} shows the results of our model plotted against the CIE clear sky model~\cite{Darula:2002} (model 12, fitted from experimental data). When compared with models from Bruneton, Preetham, and Zotti~\cite{BrunetonNeyret:2008, Preetham:1999, Zotti:2007}, our model displays the correct (approximate) behavior for higher angles. \review{%We believe that our atmospheric model has a better fitting on high angles because of the increased absorption resulting from the Pickering's approximation for rays' lengths and the experimental scientific-based selection of parameters.
-Our tests indicate that our atmospheric model has a better fitting on high angles because of the increased length traveled by the light, resulting from the Pickering's approximation, the Rayleigh and Mie absorption approach we proposed, and the scientific-based selection of parameters.} Comparisons with varying Sun positions and view angles are available in the \review{supplementary material}.
+\autoref{fig:validation_curves} shows the results of our model plotted against the CIE clear sky model~\cite{Darula:2002} (model 12, fitted from experimental data). When compared with models from Bruneton, Preetham, and Zotti~\cite{BrunetonNeyret:2008, Preetham:1999, Zotti:2007}, our model displays the correct (approximate) behavior for higher angles. %We believe that our atmospheric model has a better fitting on high angles because of the increased absorption resulting from the Pickering's approximation for rays' lengths and the experimental scientific-based selection of parameters.
+Our tests indicate that our atmospheric model has a better fitting on high angles because of the increased length traveled by the light, resulting from the Pickering's approximation, the Rayleigh and Mie absorption approach we proposed, and the scientific-based selection of parameters. Comparisons with varying Sun positions and view angles are available in the supplementary material.
 
 %%
 
@@ -1177,7 +1149,6 @@ Our tests indicate that our atmospheric model has a better fitting on high angle
 \begingroup
 \setlength{\tabcolsep}{0.2em}
 \begin{table}[t]
-\review{
   \centering
   \begin{tabular}{|p{1.4cm}|p{0.8cm} p{0.8cm} p{0.8cm} p{1.4cm} p{1.4cm} p{1.4cm}|}
 %    \hline
@@ -1192,14 +1163,12 @@ Our tests indicate that our atmospheric model has a better fitting on high angle
   \vspace*{0.1cm}
   \caption{Average performance of our method relative to the number of visible atmospheres (ATM) in OpenSpace system.}
   \label{tab:performance}
-} % \review
 \vspace*{-7mm}
 \end{table}
 \endgroup
 
 %We measured the performance of the our method inside the OpenSpace system by rendering Earth from different positions with and without atmosphere (see \autoref{fig:Performance}). The results are presented as average frame time rendered at a resolution of 1920$\times$1080 pixels. Our method has a small impact on the performance; on average, the rendering times are $2.05\,\text{ms}$ slower than the version with no atmosphere rendering enabled. 
 
-\review{
 We executed two tests to analyze the performance and scalability of our method.
 First, we measured the rendering performance during playback of a recorded flight path in which the Earth was rendered from different view positions. The path was rendered with the atmosphere enabled and disabled and the results are presented in \autoref{fig:Performance} as average frame time rendered at a resolution of 1920$\times$1080 pixels.
 In the second test we measured the performance when rendering multiple atmospheres simultaneously and the results are presented in \autoref{tab:performance}. As shown in Algorithm \autoref{alg:rendering}, our method is an image-based approach and, therefore, the screen resolution affects the performance linearly with the number of pixels as well as linearly with the number of simultaneous atmospheres. Both \autoref{fig:Performance} and \autoref{tab:performance} report the baseline rendering without the atmosphere to highlight the impact of components that are not directly related to the atmosphere, %such as the ground surface rendering. This component in particular causes the high-frequency noise in the performance measurements, as stated our previous work~\cite{bladin17globe}. 
@@ -1208,7 +1177,6 @@ such as the terrain rendering which causes the high-frequency noise in the perfo
 %Our method also scales linearly with the number of simultaneous atmospheres visible. In Table 2, one can see that adding a new atmosphere decreases the performance in around 50\% (from one to two atmospheres in 1280$\times$720 pixels) and around 88\% (from two to three atmospheres in 1280$\times$720 pixels when the system starts to be CPU bounded).
 %
 %In general, based on the data extracted in our tests, our method can generate iterative images for most of the common scenarios in interactive astrovisualization.
-}
 
 % \begin{figure}[tbh]
 %   \centering
@@ -1236,7 +1204,7 @@ The memory consumption is directly related to the size of the textures storing t
  \label{fig:application-mars}
  \vspace*{-4mm} 
 \end{figure}
-As described in the introduction\review{,} the use of an atmospheric model serves multiple purposes and is an essential component for the use of OpenSpace as a science communication platform as well as a tool for scientific exploration. An example of a science communication situation is shown in~\autoref{fig:application-mars}\review{,} where students are exploring the martian surface in a dome theater. The atmospheric effects shown on the dome create an immersive experience and thus \review{contribute} to a high level of engagement and involvement. The high performance of the model presented in this paper supports interactive frame rates at 8K resolution, which is needed in modern multi projector planetarium configurations. Rendering of realistic looking atmospheres is thus an essential component in the wide spread use of interactive astrovisualization in science communication at planetariums and science centers. 
+As described in the introduction, the use of an atmospheric model serves multiple purposes and is an essential component for the use of OpenSpace as a science communication platform as well as a tool for scientific exploration. An example of a science communication situation is shown in~\autoref{fig:application-mars}, where students are exploring the martian surface in a dome theater. The atmospheric effects shown on the dome create an immersive experience and thus contribute to a high level of engagement and involvement. The high performance of the model presented in this paper supports interactive frame rates at 8K resolution, which is needed in modern multi projector planetarium configurations. Rendering of realistic looking atmospheres is thus an essential component in the wide spread use of interactive astrovisualization in science communication at planetariums and science centers. 
 
 Another example of science exploration and communication use is dome sessions with the Mars 2020 rover science definition team chaired by Jack Mustard, Professor of Earth, Environmental, and Planetary Sciences and Professor of Environmental Studies, Brown University, who used OpenSpace for exploration and presentations of the criteria for landing spot selections. The atmosphere provided visual context when reviewing different potential landing sites.
 %, looked at mineral composition of the surface through the CRISM instrument onboard the Mars Reconnaissance orbiter. \anderscomment{should we drop the name of Prof Jack Mustard :-)} \chuckcomment{I'm not sure visualization reviewers or readers would know that name but it's OK.}
